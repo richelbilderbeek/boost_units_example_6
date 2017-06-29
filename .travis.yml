@@ -47,7 +47,7 @@ script:
   - make release
   - time ./boost_units_example_6
   - gprof boost_units_example_6 > gprof.log
-  - head gprof.log -n 1000
+  - head gprof.log
   # Get code coverage
   - ./get_code_cov
   - codecov

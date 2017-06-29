@@ -20,9 +20,7 @@ int main()
     std::cout << "sin(" << i << ") = " << std::sin(i.value()) << '\n';
   }
 
-
   //Converting between radians and degrees
-  /*
   using boost::units::degree::degree;
   {
     const Angle r(2.0 * boost::units::si::radians);
@@ -31,5 +29,4 @@ int main()
       << (r * degree / radians).value() << " degrees" //Gives incorrect answer
     ;
   }
-  */
 }
