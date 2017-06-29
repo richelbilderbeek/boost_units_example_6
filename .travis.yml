@@ -37,16 +37,16 @@ script:
   - make debug
   - ./boost_units_example_6
   # helgrind
-  - valgrind --tool=helgrind --log-file=helgrind.log -v ./boost_example_6
+  - valgrind --tool=helgrind --log-file=helgrind.log -v ./boost_units_example_6
   - cat helgrind.log
   # memcheck
-  - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./boost_example_6
+  - valgrind --leak-check=full -v --show-reachable=yes --log-file=memcheck.log ./boost_units_example_6
   - cat memcheck.log
   # Build and run and profile normal program
   - qmake boost_units_example_6.pro
   - make release
   - time ./boost_units_example_6
-  - gprof boost_example_6 > gprof.log
+  - gprof boost_units_example_6 > gprof.log
   - head gprof.log -n 1000
   # Get code coverage
   - ./get_code_cov
