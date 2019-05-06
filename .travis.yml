@@ -1,6 +1,6 @@
 language: cpp
+dist: xenial
 compiler: gcc
-dist: trusty
 
 # Boost
 addons: 
@@ -18,10 +18,10 @@ before_install:
 
 install: 
   # C++14
-  - sudo apt-get install -qq g++-6
-  - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
+  #- sudo apt-get install -qq g++-6
+  #- sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-6 90
   # Codecov
-  - sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-6 90
+  #- sudo update-alternatives --install /usr/bin/gcov gcov /usr/bin/gcov-6 90
   # cppcheck
   - sudo apt-get install -qq cppcheck
   # valgrind, for helgrind and memcheck
