@@ -37,8 +37,8 @@ script:
   - gprof boost_units_example_6 > gprof.log
   - head gprof.log
   # Get code coverage
-  - ./get_code_cov
-  - codecov
+  - ./get_code_cov >/dev/null
+  - codecov >/dev/null
   # cppcheck
   - cppcheck --quiet --error-exitcode=1 . 
   # Call OCLint
